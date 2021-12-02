@@ -1,0 +1,61 @@
+/* Universal css, resets margin & padding and sets the font family and text color so
+they're the same everywhere. */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Fira Code', monospace;
+}
+
+
+/* Commonly used css attributes in their own class for easier
+and faster coding, names are selfexplanatory */
+
+.flex {
+    display: flex;
+}
+
+.absolute {
+    display: absolute;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justifycenter {
+    justify-content: center;
+}
+
+.aligncenter {
+    align-items: center;
+}
+
+.spacearound {
+    justify-content: space-around;
+}
+
+.spacebetween {
+    justify-content: space-between;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.blacktext {
+    color: black;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.smallText {
+    font-size: smaller;
+}
+
+.mediumText {
+    font-size: small;
+}
