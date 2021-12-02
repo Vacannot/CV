@@ -1,0 +1,7 @@
+/* Media query */
+
+@media (max-width: 600px) {
+    .titleText {
+        font-size: 10px;
+    }
+}
