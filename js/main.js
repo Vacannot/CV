@@ -1,5 +1,12 @@
+/**
+ * On window load, runs start() function, right now it only runs the events() function but
+ * in the future it is likely to run more code.
+ */
 window.addEventListener('load', start)
 
+/**
+ * defines variable nextcount and gives it setters and getters
+ */
 const storage = {
     nextcount: 0,
 
@@ -11,10 +18,17 @@ const storage = {
     },
 }
 
+/**
+ * Runs events()
+ */
 function start() {
     events()
 }
 
+
+/**
+ * Defines multiple eventlisteners
+ */
 function events() {
     dragElement(document.getElementById('drag'))
     window.addEventListener("click", next)
@@ -22,12 +36,20 @@ function events() {
     document.addEventListener("keypress", removeblink)
 }
 
+
+/**
+ * Removes and sets classes on the input field
+ */
 function removeblink() {
     document.getElementById("input").classList.remove("blinker")
     document.getElementById("input").classList.remove("largetext")
     document.getElementById("input").classList.add("inputfield")
 }
 
+
+/**
+ * Logic for the first two premade prompts
+ */
 function next() {
 
     let count = storage.getNextCount
@@ -48,6 +70,9 @@ function next() {
 }
 
 
+/**
+ * Creates the different dialogue options depending on user input
+ */
 function conversation() {
 
     let answer = document.getElementById("input").value

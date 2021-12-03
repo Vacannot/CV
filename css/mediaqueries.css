@@ -1,3 +1,5 @@
+/* Media quereies for different screensizes to make sure the window always fits */
+
 @media (max-width: 950px) {
     .cmdContainer {
         max-width: 800px;

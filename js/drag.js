@@ -1,3 +1,7 @@
+/**
+ * Moves the window with mousecursor
+ */
+
 //Make the DIV element draggagle:
 function dragElement(elmnt) {
     var pos1 = 0,
@@ -12,6 +16,9 @@ function dragElement(elmnt) {
         elmnt.onmousedown = dragMouseDown;
     }
 
+    /**
+     * Finds mouse cursor at startup
+     */
     function dragMouseDown(e) {
         e = e || window.event;
         e.preventDefault();
@@ -23,6 +30,9 @@ function dragElement(elmnt) {
         document.onmousemove = elementDrag;
     }
 
+    /**
+     * Defines new posistion for the window
+     */
     function elementDrag(e) {
         e = e || window.event;
         e.preventDefault();
@@ -36,6 +46,10 @@ function dragElement(elmnt) {
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
 
+
+    /**
+     * Stops everything once the mousebutton is released
+     */
     function closeDragElement() {
         /* stop moving when mouse button is released:*/
         document.onmouseup = null;

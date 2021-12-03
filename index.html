@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title and icon of page-->
     <title>Simon CV</title>
     <link rel="icon" href="./assets/cmd icon.png">
 
@@ -26,11 +28,14 @@
 </head>
 
 <body class="body">
+    <!-- Video background -->
     <video class="videobackground" src="./assets/background .mp4" autoplay loop muted type="video/mp4" id="video"></video>
+
+    <!-- Main window, everything you can interact with is in here -->
     <div class="margin flex justifycenter">
         <div class="cmdContainer absolute" id="drag">
             <div class="content">
-
+                <!-- Header of the window -->
                 <div class="header flex spacebetween" id="dragheader">
 
                     <div class="left flex">
@@ -49,7 +54,7 @@
                     </div>
 
                 </div>
-
+                <!-- Content of the window -->
                 <div class="flex maincontainer">
                     <div class="main" id="main">
 
@@ -59,12 +64,12 @@
                             <p>(c) Microsoft Corporation &nbsp;</p>
                             <div class="pressany" id="pressany"> Press any button to continue.</div>
                         </div>
-
+                        <!-- This is where the conversation is had and all the responses are created within -->
                         <div class="conversation" id="conversation">
                             <div class="message none" id="stepone">C:\Users\Simon> Welcome to my website on here you can find all relevant information regarding me!</div>
                             <div class="message none" id="steptwo">C:\Users\Simon> Type “CV” for my written CV, “Projects” for my past projects and “Github” for a link to my Github page!</div>
                         </div>
-
+                        <!-- Inputfield -->
                         <div class="flex">
                             <input class="inputfield blinker largetext" name="input" autofocus type="text" id="input" placeholder="__">
                         </div>
