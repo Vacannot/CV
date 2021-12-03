@@ -1,3 +1,9 @@
+window.addEventListener('load', start);
+
+function start() {
+    alert("hello")
+}
+
 //Make the DIV element draggagle:
 dragElement(document.getElementById("drag"));
 
