@@ -1,52 +1,61 @@
-window.addEventListener('load', start);
+window.addEventListener('load', start)
 
-function start() {
-    alert("hello")
+const storage = {
+    nextcount: 0,
+
+    set setNextCount(value) {
+        this.nextcount = value
+    },
+
+    get getNextCount() {
+        return this.nextcount
+    },
 }
 
-//Make the DIV element draggagle:
-dragElement(document.getElementById("drag"));
+function start() {
+    events()
+    main()
+}
 
-function dragElement(elmnt) {
-    var pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
-    }
+function events() {
+    dragElement(document.getElementById('drag'))
+    window.addEventListener("click", next)
+}
 
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-    }
+function main() {
 
-    function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
 
-    function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
+}
+
+function next() {
+
+    let count = storage.getNextCount
+    count = count + 1
+    storage.setNextCount = count
+
+    if (count == 1) {
+        stepone()
+    } else if (count == 2) {
+        steptwo()
+        document.getElementById("pressany").remove()
     }
+}
+
+function stepone() {
+    document.getElementById("stepone").classList.remove("none")
+}
+
+function steptwo() {
+    document.getElementById("steptwo").classList.remove("none")
+}
+
+function conversation() {
+
+    let answer = document.getElementById("input").value
+
+    if (answer == "CV" || answer == "cv") {
+        /* Create CV Respone in correct div*/
+    } else if (answer == Github || answer == github) {
+        /* Create Github respone in correct div */
+    } else if ()
 }

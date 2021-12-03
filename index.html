@@ -21,11 +21,12 @@
 
     <!-- Javascript -->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/drag.js"></script>
 
 </head>
 
-<body class="">
-    <video class="videobackground" src="./assets/background .mp4" autoplay loop muted type="video/mp4"></video>
+<body class="body">
+    <video class="videobackground" src="./assets/background .mp4" autoplay loop muted type="video/mp4" id="video"></video>
     <div class="margin flex justifycenter">
         <div class="cmdContainer absolute" id="drag">
             <div class="content">
@@ -55,18 +56,17 @@
                         Microsoft Windows [Version 10.0.19042.1337]
 
                         <div class="flex">
-                            <div>(c) Microsoft Corporation &nbsp;</div>
-                            <div class="pressany"> Press any button to continue.</div>
+                            <p>(c) Microsoft Corporation &nbsp;</p>
+                            <div class="pressany" id="pressany"> Press any button to continue.</div>
                         </div>
 
                         <div class="conversation">
-                            <div class="message">C:\Users\Simon> Welcome to my website on here you can find all relevant information regarding me!</div>
-                            <div class="message">C:\Users\Simon> Type “CV” for my written CV, “Projects” for my past projects and “Github” for a link to my Github page!</div>
+                            <div class="message none" id="stepone">C:\Users\Simon> Welcome to my website on here you can find all relevant information regarding me!</div>
+                            <div class="message none" id="steptwo">C:\Users\Simon> Type “CV” for my written CV, “Projects” for my past projects and “Github” for a link to my Github page!</div>
                         </div>
 
                         <div class="flex">
-                            <input class="inputfield" autofocus type="text">
-                            <div class="blinker none">__</div>
+                            <input class="inputfield blinker largetext" autofocus type="text" id="inputfield" placeholder="__">
                         </div>
 
                     </div>

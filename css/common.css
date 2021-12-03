@@ -56,10 +56,15 @@ and faster coding, names are selfexplanatory */
     text-align: center;
 }
 
-.smallText {
+.smalltext {
     font-size: smaller;
 }
 
-.mediumText {
+.mediumtext {
     font-size: small;
+}
+
+.largetext {
+    font-size: larger;
+    font-weight: bolder;
 }
