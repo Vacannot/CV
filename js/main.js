@@ -1,7 +1,4 @@
-window.addEventListener('load', main);
-
-
-// Make the DIV element draggable:
+//Make the DIV element draggagle:
 dragElement(document.getElementById("drag"));
 
 function dragElement(elmnt) {
@@ -10,10 +7,10 @@ function dragElement(elmnt) {
         pos3 = 0,
         pos4 = 0;
     if (document.getElementById(elmnt.id + "header")) {
-        // if present, the header is where you move the DIV from:
+        /* if present, the header is where you move the DIV from:*/
         document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
     } else {
-        // otherwise, move the DIV from anywhere inside the DIV:
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
         elmnt.onmousedown = dragMouseDown;
     }
 
@@ -42,7 +39,7 @@ function dragElement(elmnt) {
     }
 
     function closeDragElement() {
-        // stop moving when mouse button is released:
+        /* stop moving when mouse button is released:*/
         document.onmouseup = null;
         document.onmousemove = null;
     }

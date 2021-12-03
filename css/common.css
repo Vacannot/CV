@@ -17,7 +17,7 @@ and faster coding, names are selfexplanatory */
 }
 
 .absolute {
-    display: absolute;
+    position: absolute;
 }
 
 .column {
