@@ -6,4 +6,4 @@ Interactive CV made to represent me, updates and changes will be made in the fut
 
 Will be further developed upon as i get better at webdev.
 
-[Visit my site](github.com/pages)
+[Visit my site](https://vacannot.github.io/CV/)
