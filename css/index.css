@@ -59,8 +59,18 @@
    /* Defines posistion of the different tools */
    
    .toolsContainer {
-       width: 97px;
        margin-right: 31px;
+       cursor: pointer;
+   }
+   /* collapsecontainer styling for background hover */
+   
+   .collapsecontain {
+       height: 100%;
+       width: 40px;
+   }
+   
+   .collapsecontain:hover {
+       background-color: #202020;
    }
    /* css for the collapse icon */
    
@@ -69,12 +79,32 @@
        height: 0px;
        border: 1px solid #808080;
    }
+   /* fullscreencontainer styling for background hover */
+   
+   .fullscreencontain {
+       height: 100%;
+       width: 40px;
+   }
+   
+   .fullscreencontain:hover {
+       background-color: #202020;
+   }
    /* css for the fullscreen icon */
    
    .fullscreen {
        width: 13px;
        height: 13px;
        border: 2px solid #808080;
+   }
+   /* closencontainer styling for background hover */
+   
+   .closecontain {
+       height: 100%;
+       width: 40px;
+   }
+   
+   .closecontain:hover {
+       background-color: #202020;
    }
    /* css for the close icon */
    
@@ -84,7 +114,6 @@
        font-weight: 100;
        color: #808080;
        margin-top: -6px;
-       margin-left: -5px;
    }
    /* css for the main window, defines scroll functions */
    
