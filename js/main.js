@@ -19,10 +19,11 @@ const storage = {
 }
 
 /**
- * Runs events()
+ * Runs events() & Browserversion
  */
 function start() {
     events()
+    getversion()
 }
 
 
