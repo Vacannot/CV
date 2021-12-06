@@ -35,6 +35,7 @@ function events() {
     window.addEventListener("click", next)
     document.addEventListener("keypress", next)
     document.addEventListener("keypress", removeblink)
+    document.getElementById("close").addEventListener("click", close)
 }
 
 
@@ -113,4 +114,9 @@ function conversation() {
         document.getElementById("input").value = ""
         document.getElementById("input").focus()
     }
+}
+
+function close() {
+    document.getElementById("terminal").classList.add("none")
+    alert("Well, that was stupid.")
 }
